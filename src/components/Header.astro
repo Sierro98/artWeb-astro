@@ -5,11 +5,11 @@ const userEmail = Astro.cookies.get("userEmail")
 ---
 
 <header
-    class="flex flex-col py-12 px-24 max-sm:px-5 max-sm:py-10 max-w-7xl justify-self-center w-full"
+    class="flex flex-col py-8 px-16 max-sm:px-5 max-sm:py-10 justify-self-center w-full"
 >   
     <div class="flex justify-between items-center">
         <div class="flex items-end">
-            <h1 class="text-4xl">JavatoGarabato</h1>
+            <h1 class="text-3xl sm:text-5xl">JavatoGarabato</h1>
             <p class="px-3 text-xs">Artista desde 1998</p>
         </div>
         
@@ -27,7 +27,7 @@ const userEmail = Astro.cookies.get("userEmail")
 
     <hr class="flex-grow border-gray-800"></hr>
 
-    <div class="flex justify-between items-center py-3 text-lg font-semibold px-4">
+    <div class="flex justify-between items-center py-3 text-base sm:text-2xl font-semibold px-2">
         <p>Obras</p>
         <p>Blog</p>
         <p>Productos</p>
@@ -41,7 +41,7 @@ const userEmail = Astro.cookies.get("userEmail")
 <style>
     h1 {
         font-family: 'Azeret Mono Variable', monospace;
-        font-weight: bold;
+        font-weight: bolder;
     }
     p {
         font-family: 'Azeret Mono Variable', monospace;
