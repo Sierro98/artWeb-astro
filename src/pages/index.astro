@@ -1,11 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import H1 from "../components/H1.astro";
-import Main from "../components/Main.astro"
+import Main from "../components/Main.astro";
+import LittleDescription from "../components/Little-description.astro";
+
+const description: string = "JavatoGarabato, nacido en Madrid, siempre ha estado interesado por mostrar mediante sus obras una visión del mundo diferente e inconformista."
 ---
 
 <Layout title="JavatoGarabato">
 	<Main>
-		
+		<LittleDescription description={description}/>
 	</Main>
 </Layout>
