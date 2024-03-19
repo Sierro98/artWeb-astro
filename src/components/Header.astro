@@ -15,6 +15,7 @@ const userEmail = Astro.cookies.get("userEmail")
         
         <a href="/" class="flex gap-x-4 items-center">
             <Image
+                loading={"eager"}
                 src="/heartbeat.png"
                 alt="rhythm nation logo"
                 width={64}
