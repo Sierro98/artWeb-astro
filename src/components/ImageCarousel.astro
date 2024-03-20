@@ -9,22 +9,28 @@ const {destination} = Astro.props;
 const imgDescription: string = "JavatoGarabato Art"
 const imgWidth = 400;
 const imgHeight = 350;
+
+import firstImg from "../assets/MainCarousel/Andrew Kliatskyi 3D Render.jpg";
+import secondImg from "../assets/MainCarousel/Javier Miranda.jpg";
+import thirdImg from "../assets/MainCarousel/Luke Jones 3D Render.jpg";
+import fourthImg from "../assets/MainCarousel/Marco Damm 3D Render.jpg";
+import fifthImg from "../assets/MainCarousel/Rick Rothenberg 3D Renders.jpg";
 ---
 <div class="pb-12">
     <a href={destination} class="scroll">
         <div class="scroll-slide">
-            <Image quality={'mid'} loading={"eager"} src="/images/MainCarousel/Andrew Kliatskyi 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/MainCarousel/Javier Miranda.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/MainCarousel/Luke Jones 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/MainCarousel/Marco Damm 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/MainCarousel/Rick Rothenberg 3D Renders.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={firstImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={secondImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={thirdImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={fourthImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={fifthImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
         </div>
         <div class="scroll-slide">
-            <Image quality={'mid'} loading={"eager"} src="/images/MainCarousel/Andrew Kliatskyi 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/MainCarousel/Javier Miranda.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/MainCarousel/Luke Jones 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/MainCarousel/Marco Damm 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/MainCarousel/Rick Rothenberg 3D Renders.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={firstImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={secondImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={thirdImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={fourthImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={fifthImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
         </div>
     </a>
 </div>

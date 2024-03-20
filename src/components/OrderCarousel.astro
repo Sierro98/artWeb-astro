@@ -9,22 +9,27 @@ const {destination} = Astro.props;
 const imgDescription: string = "Products to buy"
 const imgWidth = 400;
 const imgHeight = 350;
+
+import firstImg from "../assets/OrderNow/Adele Shafiee Clothing Model.jpg";
+import secondImg from "../assets/OrderNow/Clothing Model Andres Hernandez.jpg";
+import thirdImg from "../assets/OrderNow/Clothing Model Dani Navarro.jpg";
+import fourthImg from "../assets/OrderNow/Clothing Model Ksenia Varapaeva.jpg";
 ---
 <div class="pb-12">
     <a href={destination} class="scroll-order">
         <div class="scroll-order-slide">
-            <Image quality={'mid'} loading={"eager"} src="/images/OrderNow/Adele Shafiee Clothing Model.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/OrderNow/Clothing Model Andres Hernandez.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={firstImg} alt={imgDescription} height={imgHeight} width={imgWidth}/>
+            <Image format='avif' quality={'max'} src={secondImg} alt={imgDescription} height={imgHeight} width={imgWidth}/>
             <h1 class="sm:text-9xl text-8xl font-bold text-black azeret-bold">ORDER NOW!</h1>
-            <Image quality={'mid'} loading={"eager"} src="/images/OrderNow/Clothing Model Dani Navarro.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/OrderNow/Clothing Model Ksenia Varapaeva.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={thirdImg} alt={imgDescription} height={imgHeight} width={imgWidth}/>
+            <Image format='avif' quality={'max'} src={fourthImg} alt={imgDescription} height={imgHeight} width={imgWidth}/>
         </div>
         <div class="scroll-order-slide">
-            <Image quality={'mid'} loading={"eager"} src="/images/OrderNow/Adele Shafiee Clothing Model.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/OrderNow/Clothing Model Andres Hernandez.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={firstImg} alt={imgDescription} height={imgHeight} width={imgWidth}/>
+            <Image format='avif' quality={'max'} src={secondImg} alt={imgDescription} height={imgHeight} width={imgWidth}/>
             <h1 class="sm:text-9xl text-8xl font-bold text-black azeret-bold">ORDER NOW!</h1>
-            <Image quality={'mid'} loading={"eager"} src="/images/OrderNow/Clothing Model Dani Navarro.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image quality={'mid'} loading={"eager"} src="/images/OrderNow/Clothing Model Ksenia Varapaeva.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image format='avif' quality={'max'} src={thirdImg} alt={imgDescription} height={imgHeight} width={imgWidth}/>
+            <Image format='avif' quality={'max'} src={fourthImg} alt={imgDescription} height={imgHeight} width={imgWidth}/>
         </div>
     </a>
 </div>
