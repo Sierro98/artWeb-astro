@@ -8,7 +8,7 @@ type Props = {
 const {destination} = Astro.props;
 const imgDescription: string = "JavatoGarabato Art"
 const imgWidth = 400;
-const imgHeight = 300;
+const imgHeight = 350;
 ---
 <div class="pb-12">
     <a href={destination} class="scroll">
@@ -34,14 +34,14 @@ const imgHeight = 300;
     display: block;
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-color: transparent;
     overflow: hidden !important;
     white-space: nowrap;
     z-index: 1;
 }
 .scroll-slide {
-    animation: scrollText 30s infinite linear;
+    animation: scrollImage 30s infinite linear;
     display: inline-block;
     justify-content: space-between;
     align-items: center;
@@ -49,14 +49,14 @@ const imgHeight = 300;
     white-space: nowrap;
 }
 .scroll img {
-    height: 300px;
+    height: 350px;
     min-width: 400px;
 	object-fit: cover;
     display: inline-block;
     margin: 0 20px;
     color: white;
 }
-@keyframes scrollText {
+@keyframes scrollImage {
     from {
         transform: translateX(-100%);
     }
