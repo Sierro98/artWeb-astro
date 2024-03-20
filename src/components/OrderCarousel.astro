@@ -11,15 +11,15 @@ const imgWidth = 400;
 const imgHeight = 350;
 ---
 <div class="pb-12">
-    <a href={destination} class="scroll">
-        <div class="scroll-slide">
+    <a href={destination} class="scroll-order">
+        <div class="scroll-order-slide">
             <Image loading={"eager"} src="/images/OrderNow/Adele Shafiee Clothing Model.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
             <Image loading={"eager"} src="/images/OrderNow/Clothing Model Andres Hernandez.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
             <h1 class="text-9xl font-bold text-black azeret-bold">ORDER NOW</h1>
             <Image loading={"eager"} src="/images/OrderNow/Clothing Model Dani Navarro.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
             <Image loading={"eager"} src="/images/OrderNow/Clothing Model Ksenia Varapaeva.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
         </div>
-        <div class="scroll-slide">
+        <div class="scroll-order-slide">
             <Image loading={"eager"} src="/images/OrderNow/Adele Shafiee Clothing Model.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
             <Image loading={"eager"} src="/images/OrderNow/Clothing Model Andres Hernandez.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
             <h1 class="text-9xl font-bold text-black azeret-bold">ORDER NOW</h1>
@@ -30,7 +30,7 @@ const imgHeight = 350;
 </div>
 
 <style>
-    .scroll {
+    .scroll-order {
         display: block;
         position: relative;
         width: 100%;
@@ -40,15 +40,15 @@ const imgHeight = 350;
         white-space: nowrap;
         z-index: 1;
     }
-    .scroll-slide {
-        animation: scrollText 35s infinite linear;
+    .scroll-order-slide {
+        animation: scrollText 65s infinite linear;
         display: inline-block;
         justify-content: space-between;
         align-items: center;
         position: relative;
         white-space: nowrap;
     }
-    .scroll img {
+    .scroll-order img {
         height: 350px;
         min-width: 400px;
         object-fit: cover;
@@ -56,7 +56,7 @@ const imgHeight = 350;
         margin: 0 20px;
         color: white;
     }
-    .scroll h1 {
+    .scroll-order h1 {
         display: inline-block;
         margin: 0 20px;
     }

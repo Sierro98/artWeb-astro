@@ -4,6 +4,7 @@ import Main from "../components/Main.astro";
 import LittleDescription from "../components/Little-description.astro";
 import ImageCarousel from "../components/ImageCarousel.astro"
 import OrderCarousel from '../components/OrderCarousel.astro';
+import PublicationsBanner from '../components/PublicationsBanner.astro';
 
 const description: string = "JavatoGarabato, nacido en Madrid, siempre ha estado interesado por mostrar mediante sus obras una visión del mundo diferente e inconformista."
 ---
@@ -14,5 +15,6 @@ const description: string = "JavatoGarabato, nacido en Madrid, siempre ha estado
 		<ImageCarousel destination='/project-mz'/>
 		<hr class=" mx-auto flex-grow border-gray-800 w-11/12 justify-self-center pb-12"></hr>
 		<OrderCarousel destination='project-mz'/>
+		<PublicationsBanner destination='/project-mz' message='PUBLICATIONS'/>
 	</Main>
 </Layout>
