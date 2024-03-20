@@ -1,5 +1,4 @@
 ---
-import { lazy } from 'astro/zod';
 import { Image } from 'astro:assets';
 
 type Props = {
@@ -9,32 +8,33 @@ type Props = {
 const {destination} = Astro.props;
 const imgDescription: string = "JavatoGarabato Art"
 const imgWidth = 400;
-const imgHeight = 250;
+const imgHeight = 300;
 ---
-
-<a href={destination} class="scroll">
-    <div class="scroll-slide">
-        <Image loading={"eager"} src="/images/MainCarousel/Andrew Kliatskyi 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-        <Image loading={"eager"} src="/images/MainCarousel/Javier Miranda.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-        <Image loading={"eager"} src="/images/MainCarousel/Luke Jones 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-        <Image loading={"eager"} src="/images/MainCarousel/Marco Damm 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-        <Image loading={"eager"} src="/images/MainCarousel/Rick Rothenberg 3D Renders.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-    </div>
-    <div class="scroll-slide">
-        <Image loading={"eager"} src="/images/MainCarousel/Andrew Kliatskyi 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-        <Image loading={"eager"} src="/images/MainCarousel/Javier Miranda.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-        <Image loading={"eager"} src="/images/MainCarousel/Luke Jones 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-        <Image loading={"eager"} src="/images/MainCarousel/Marco Damm 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-        <Image loading={"eager"} src="/images/MainCarousel/Rick Rothenberg 3D Renders.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
-    </div>
-</a>
+<div class="pb-12">
+    <a href={destination} class="scroll">
+        <div class="scroll-slide">
+            <Image loading={"eager"} src="/images/MainCarousel/Andrew Kliatskyi 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image loading={"eager"} src="/images/MainCarousel/Javier Miranda.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image loading={"eager"} src="/images/MainCarousel/Luke Jones 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image loading={"eager"} src="/images/MainCarousel/Marco Damm 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image loading={"eager"} src="/images/MainCarousel/Rick Rothenberg 3D Renders.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+        </div>
+        <div class="scroll-slide">
+            <Image loading={"eager"} src="/images/MainCarousel/Andrew Kliatskyi 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image loading={"eager"} src="/images/MainCarousel/Javier Miranda.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image loading={"eager"} src="/images/MainCarousel/Luke Jones 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image loading={"eager"} src="/images/MainCarousel/Marco Damm 3D Render.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+            <Image loading={"eager"} src="/images/MainCarousel/Rick Rothenberg 3D Renders.jpg" alt={imgDescription} width={imgWidth} height={imgHeight}/>
+        </div>
+    </a>
+</div>
 
 <style>
 .scroll {
     display: block;
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 300px;
     background-color: transparent;
     overflow: hidden !important;
     white-space: nowrap;
@@ -49,7 +49,7 @@ const imgHeight = 250;
     white-space: nowrap;
 }
 .scroll img {
-    height: 250px;
+    height: 300px;
     min-width: 400px;
 	object-fit: cover;
     display: inline-block;
@@ -58,10 +58,10 @@ const imgHeight = 250;
 }
 @keyframes scrollText {
     from {
-        transform: translateX(0%);
+        transform: translateX(-100%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(0%);
     }
 }
 
