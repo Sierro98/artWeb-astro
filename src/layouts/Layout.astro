@@ -1,7 +1,9 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import '@fontsource-variable/azeret-mono'
 import '../styles/global.css'
+
 interface Props {
 	title: string;
 	description?: string;
@@ -27,8 +29,14 @@ const {
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen">
-		<Header/>
+		<Header 
+			obrasDest="/project-mz" 
+			blogDest="/project-mz" 
+			productosDest="/project-mz" 
+			contactoDest="/project-mz"
+		/>
 		<slot />
+		<Footer/>
 	</body>
 </html>
 

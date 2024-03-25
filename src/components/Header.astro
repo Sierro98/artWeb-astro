@@ -1,19 +1,27 @@
 ---
 import {Image} from "astro:assets"
 
+type Props = {
+    obrasDest: string;
+    blogDest: string;
+    productosDest: string;
+    contactoDest: string;
+}
+
+const {obrasDest, blogDest, productosDest, contactoDest} = Astro.props;
 const userEmail = Astro.cookies.get("userEmail")
 ---
 
 <header
-    class="flex flex-col py-12 px-16 max-sm:px-5 max-sm:py-8 justify-self-center w-full"
+    class="flex flex-col py-12 px-16 max-sm:px-5 max-sm:py-8 justify-self-center"
 >   
     <div class="flex justify-between items-center">
         <div class="flex items-end">
             <h1 class="text-3xl sm:text-5xl azeret-bold">JavatoGarabato</h1>
-            <p class="px-3 text-xs azeret">Artista desde 1998</p>
+            <h2 class="px-3 text-xs azeret">Artista desde 1998</h2>
         </div>
         
-        <a href="/" class="flex gap-x-4 items-center">
+        <a href="/project-mz" class="flex gap-x-4 items-center">
             <Image
                 loading={"eager"}
                 src="/heartbeat.png"
@@ -29,10 +37,10 @@ const userEmail = Astro.cookies.get("userEmail")
     <hr class="flex-grow border-gray-800"></hr>
 
     <div class="flex justify-between items-center py-3 text-base sm:text-2xl font-semibold px-2 azeret">
-        <a href="/">Obras</a>
-        <a href="/">Blog</a>
-        <a href="/">Productos</a>
-        <a href="/">Contacto</a>
+        <a href={obrasDest}>Obras</a>
+        <a href={blogDest}>Blog</a>
+        <a href={productosDest}>Productos</a>
+        <a href={contactoDest}>Contacto</a>
     </div>
 
     <hr class="flex-grow border-gray-800"></hr>
