@@ -15,11 +15,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/works/*
 
 <div class="p-5 md:p-10">
   <div
-    class="columns-1 sm:columns-2 lg:columns-3 gap-5 lg:gap-8 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8"
+    class="columns-1 sm:columns-2 gap-5 lg:gap-8 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8"
   >
     {
       Object.keys(images).map((imagePath) => (
         <Image
+        densities={[0.1]}
           format="avif"
           quality={"low"}
           src={images[imagePath]()}
