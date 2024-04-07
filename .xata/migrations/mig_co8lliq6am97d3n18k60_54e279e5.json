@@ -1,0 +1,18 @@
+{
+  "id": "mig_co8lliq6am97d3n18k60",
+  "parentID": "mig_co8llea6am97d3n18k50",
+  "checksum": "1:54e279e507d4607bb25eaaf5c357838b2c0f9b84e4b0dea1d06fe7b8ceb6e40b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Anon"
+        },
+        "table": "works"
+      }
+    }
+  ]
+}

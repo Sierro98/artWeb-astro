@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Alejandro-Sierro-s-workspace-gjdu7j.eu-central-1.xata.sh/db/project-mz",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

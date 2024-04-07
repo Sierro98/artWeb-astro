@@ -1,0 +1,18 @@
+{
+  "id": "mig_co8llea6am97d3n18k50",
+  "parentID": "mig_co8jcs26am97d3n18jag",
+  "checksum": "1:2998549e9f3b6452aec1fe2eb63f17490e326fb11e56c023c2b522bf11d809ac",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "price",
+          "type": "float",
+          "notNull": true,
+          "defaultValue": "0.0"
+        },
+        "table": "works"
+      }
+    }
+  ]
+}

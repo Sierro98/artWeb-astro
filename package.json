@@ -16,6 +16,7 @@
     "@fontsource-variable/azeret-mono": "^5.0.20",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.23",
+    "@xata.io/client": "^0.29.3",
     "astro": "^4.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

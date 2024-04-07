@@ -1,0 +1,17 @@
+{
+  "id": "mig_co8jak26am97d3n18j70",
+  "parentID": "mig_co8j9ga6am97d3n18j60",
+  "checksum": "1:f8144beb6b9c29ba4208a0b6fe9475304987f4e39b1e279e5220d8f305e4818f",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "art_name",
+          "type": "string",
+          "unique": true
+        },
+        "table": "authors"
+      }
+    }
+  ]
+}

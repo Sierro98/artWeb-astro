@@ -1,0 +1,13 @@
+{
+  "id": "mig_co8lqni7l01k6601d86g",
+  "parentID": "mig_co8lm7rojfo0nv6lle7g",
+  "checksum": "1:02577e7f8429fa25ab0e0c5dfa71d2488f3076077fcadda74f9c615c9187ab8d",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "author",
+        "table": "works"
+      }
+    }
+  ]
+}

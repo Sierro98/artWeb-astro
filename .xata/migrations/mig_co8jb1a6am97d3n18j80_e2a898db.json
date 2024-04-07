@@ -1,0 +1,16 @@
+{
+  "id": "mig_co8jb1a6am97d3n18j80",
+  "parentID": "mig_co8jak26am97d3n18j70",
+  "checksum": "1:e2a898db8bc56c093bdf9e402a3728e6ad71119d419bfe4b135580d3d91311c9",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "description",
+          "type": "string"
+        },
+        "table": "authors"
+      }
+    }
+  ]
+}
