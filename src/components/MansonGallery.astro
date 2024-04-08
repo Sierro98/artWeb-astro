@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import { getXataClient } from "../xata";
+
+const xata = getXataClient();
+
+const data = await xata.db.works.getPaginated({ pagination: { size: 10 } });
+---
+
+<div class="p-5 md:p-10">
+  <div
+    class="columns-1 sm:columns-2 gap-5 lg:gap-8 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8"
+  >
+    {
+      data.records.map((record) => {
+        return (
+          <Image
+            densities={[0.1]}
+            src={record.images?.at(0)?.url || ""}
+            inferSize
+            alt={record.name}
+          />
+        );
+      })
+    }
+  </div>
+</div>
