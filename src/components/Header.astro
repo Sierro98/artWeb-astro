@@ -1,49 +1,50 @@
 ---
-import {Image} from "astro:assets"
+import { Image } from "astro:assets";
+import { ViewTransitions } from "astro:transitions";
 
 type Props = {
-    obrasDest: string;
-    blogDest: string;
-    productosDest: string;
-    contactoDest: string;
-}
+  obrasDest: string;
+  blogDest: string;
+  productosDest: string;
+  contactoDest: string;
+};
 
-const {obrasDest, blogDest, productosDest, contactoDest} = Astro.props;
-const userEmail = Astro.cookies.get("userEmail")
+const { obrasDest, blogDest, productosDest, contactoDest } = Astro.props;
 ---
 
-<header
-    class="flex flex-col py-12 px-16 max-sm:px-5 max-sm:py-8 justify-self-center"
->   
-    <div class="flex justify-between items-center">
-        <div class="flex items-end">
-            <h1 class="text-3xl sm:text-5xl azeret-bold"><a href="/project-mz" class="text-black">JavatoGarabato</a></h1>
-            <h2 class="px-3 text-xs azeret">Artista desde 1998</h2>
-        </div>
-        
-        <a href="/project-mz" class="flex gap-x-4 items-center">
-            <Image
-                loading={"eager"}
-                src="/heartbeat.png"
-                alt="rhythm nation logo"
-                width={64}
-                height={64}
-                format="webp"
-                class="w-16"
-            />
-        </a>
+<header class="flex flex-col py-12 px-16 max-sm:px-5 max-sm:py-8 justify-self-center">
+  <ViewTransitions />
+  <div class="flex justify-between items-center">
+    <div class="flex items-end">
+      <h1 class="text-3xl sm:text-5xl azeret-bold">
+        <a href="/project-mz" class="text-black">JavatoGarabato</a>
+      </h1>
+      <h2 class="px-3 text-xs azeret">Artista desde 1998</h2>
     </div>
 
-    <hr class="flex-grow border-gray-800"></hr>
+    <a href="/project-mz" class="flex gap-x-4 items-center">
+      <Image
+        loading={"eager"}
+        src="/heartbeat.png"
+        alt="rhythm nation logo"
+        width={64}
+        height={64}
+        format="webp"
+        class="w-16"
+      />
+    </a>
+  </div>
 
-    <div class="flex justify-between items-center py-3 text-base sm:text-2xl font-semibold px-2 azeret">
-        <a href={obrasDest}>Obras</a>
-        <a href={blogDest}>Blog</a>
-        <a href={productosDest}>Productos</a>
-        <a href={contactoDest}>Contacto</a>
-    </div>
+  <hr class="flex-grow border-gray-800" />
 
-    <hr class="flex-grow border-gray-800"></hr>
-    
+  <div
+    class="flex justify-between items-center py-3 text-base sm:text-2xl font-semibold px-2 azeret"
+  >
+    <a href={obrasDest}>Obras</a>
+    <a href={blogDest}>Blog</a>
+    <a href={productosDest}>Productos</a>
+    <a href={contactoDest}>Contacto</a>
+  </div>
+
+  <hr class="flex-grow border-gray-800" />
 </header>
-

@@ -4,7 +4,7 @@ import { getXataClient } from "../xata";
 
 const xata = getXataClient();
 
-const data = await xata.db.works.getPaginated({ pagination: { size: 9 } });
+const data = await xata.db.works.getPaginated({ pagination: { size: 20 } });
 ---
 
 <div class="p-5 md:p-10">
@@ -31,6 +31,7 @@ const data = await xata.db.works.getPaginated({ pagination: { size: 9 } });
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
+        ∫
         class="w-6 h-6"
       >
         <path
@@ -45,7 +46,6 @@ const data = await xata.db.works.getPaginated({ pagination: { size: 9 } });
 <script>
   const button = document.querySelector(".next-page-button");
   if (button) {
-    button.addEventListener("click", () => {
-    });
+    button.addEventListener("click", () => {});
   }
 </script>
