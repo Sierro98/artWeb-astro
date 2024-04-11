@@ -9,7 +9,7 @@ const data = await xata.db.works.getPaginated({ pagination: { size: 20 } });
 
 <div class="p-5 md:p-10">
   <div
-    class="columns-1 sm:columns-2 lg:columns-3 gap-5 lg:gap-8 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8"
+    class="columns-1 sm:columns-2 lg:columns-3 gap-5 lg:gap-8 [&>div:not(:first-child)]:mt-5 lg:[&>div:not(:first-child)]:mt-8"
   >
     {
       data.records.map((record) => {
@@ -17,7 +17,20 @@ const data = await xata.db.works.getPaginated({ pagination: { size: 20 } });
           format: "avif",
           quality: 50,
         });
-        return <Image densities={[0.1]} src={transImage?.url || ""} inferSize alt={record.name} />;
+        return (
+          <div class="relative">
+            <Image
+              class="object-cover hover:scale-150 hover:rotate-0 duration-500 hover:-translate-y-12"
+              densities={[0.1]}
+              src={transImage?.url || ""}
+              inferSize
+              alt={record.name}
+            />
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black/60 hover:opacity-100">
+              <p class="text-white text-lg">{record.name}</p>
+            </div>
+          </div>
+        );
       })
     }
   </div>
