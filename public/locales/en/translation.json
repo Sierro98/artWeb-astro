@@ -1,0 +1,13 @@
+{
+    "Footer": {
+        "city": "Madrid",
+        "country": "Spain"
+    },
+    "Header": {
+        "artistFrom": "Artist from 1998",
+        "works": "Works",
+        "blog": "Blog",
+        "products": "Products",
+        "contacts": "Contact"
+    }
+}

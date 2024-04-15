@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { ViewTransitions } from "astro:transitions";
+import { t } from "i18next"
 
 type Props = {
   obrasDest: string;
@@ -40,10 +41,10 @@ const { obrasDest, blogDest, productosDest, contactoDest } = Astro.props;
   <div
     class="flex justify-between items-center py-3 text-base sm:text-2xl font-semibold px-2 azeret"
   >
-    <a href={obrasDest}>Obras</a>
-    <a href={blogDest}>Blog</a>
-    <a href={productosDest}>Productos</a>
-    <a href={contactoDest}>Contacto</a>
+    <a href={obrasDest}>{t("Header.works")}</a>
+    <a href={blogDest}>{t("Header.blog")}</a>
+    <a href={productosDest}>{t("Header.products")}</a>
+    <a href={contactoDest}>{t("Header.contacts")}</a>
   </div>
 
   <hr class="flex-grow border-gray-800" />
