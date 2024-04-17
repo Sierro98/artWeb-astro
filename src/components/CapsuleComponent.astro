@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import { getXataClient, type DatabaseSchema } from "../xata";
+import { Kysely } from "kysely";
+import { XataDialect, type Model } from "@xata.io/kysely";
+
+const xata = getXataClient();
+
+const db = new Kysely<Model<DatabaseSchema>>({
+  dialect: new XataDialect({ xata }),
+});
+
+const capsules = await db
+    .selectFrom("capsules")
+    .select('name')
+    .limit(10)
+    .execute();
+
+
+
+//TODO: Finish creating this component
+---
+
+<div class="p-5 md:p-10">
+    {
+        capsules.map((capsule) => {
+            <span>{capsule.name}</span>
+        })
+    }
+</div>
+
