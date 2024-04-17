@@ -11,21 +11,20 @@ const db = new Kysely<Model<DatabaseSchema>>({
 });
 
 const capsules = await db
-    .selectFrom("capsules")
-    .select('name')
-    .limit(10)
-    .execute();
-
-
+  .selectFrom("capsules")
+  .innerJoin('works', 'works.collection', 'capsules.id')
+  .select(['capsules.name', 'works.images'])
+  .execute();
 
 //TODO: Finish creating this component
 ---
 
-<div class="p-5 md:p-10">
-    {
-        capsules.map((capsule) => {
-            <span>{capsule.name}</span>
-        })
-    }
+<div class="p-5 md:p-10 col-auto">
+    
+  {
+    capsules.map((capsule) => {
+      console.log(capsule);
+      return <span>{capsule.name}</span>;
+    })
+  }
 </div>
-

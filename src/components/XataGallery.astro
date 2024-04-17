@@ -14,9 +14,8 @@ const data = await xata.db.works.getPaginated({ pagination: { size: 20 } });
   >
     {
       data.records.map((record) => {
-        const transImage = record.images?.at(0)?.transform({
+        const transImage = record.images?.transform({
           format: "avif",
-          quality: 50,
         });
         return (
           <div class="relative">
@@ -29,7 +28,7 @@ const data = await xata.db.works.getPaginated({ pagination: { size: 20 } });
             />
             <div class="absolute inset-0 flex items-center flex-col justify-center opacity-0 transition-opacity duration-300 bg-black/60 hover:opacity-100">
               <p class="text-white text-2xl capitalize">{record.name}</p>
-              <br>
+              <br />
               <p class="text-white text-lg">{record.description}</p>
             </div>
           </div>

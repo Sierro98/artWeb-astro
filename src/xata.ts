@@ -10,7 +10,6 @@ const tables = [
   {
     name: "works",
     columns: [
-      { name: "images", type: "file[]" },
       { name: "price", type: "float", notNull: true, defaultValue: "0.0" },
       { name: "name", type: "string", notNull: true, defaultValue: "Anon" },
       {
@@ -20,6 +19,7 @@ const tables = [
         defaultValue: "Anon",
       },
       { name: "collection", type: "link", link: { table: "capsules" } },
+      { name: "images", type: "file" },
     ],
   },
   {
@@ -43,6 +43,7 @@ const tables = [
         notNull: true,
         defaultValue: "now",
       },
+      { name: "head_image", type: "file" },
     ],
     revLinks: [{ column: "collection", table: "works" }],
   },
