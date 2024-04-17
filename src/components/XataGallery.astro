@@ -4,6 +4,7 @@ import { getXataClient } from "../xata";
 
 const xata = getXataClient();
 
+//TODO: change this DB fetch so a prop with what to search can be passed
 const data = await xata.db.works.getPaginated({ pagination: { size: 20 } });
 ---
 
