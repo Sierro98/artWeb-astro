@@ -1,11 +1,12 @@
 ---
+import { t } from "i18next"
+
 type Props = {
     destination:string;
-    message: string
 }
 
 const {destination} = Astro.props;
-const {message} = Astro.props;
+const message = t("PublicationBanner");
 ---
 
 <div class="pb-12">

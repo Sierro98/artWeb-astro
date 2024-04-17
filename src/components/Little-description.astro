@@ -1,11 +1,7 @@
 ---
-type Props = {
-    description: string
-}
-
-const {description} = Astro.props
+import { t } from "i18next"
 
 ---
 <div class="flex flex-col justify-self-center px-24 max-sm:px-7 max-sm:pb-8 pb-12">
-    <p class="text-l sm:text-2xl azeret-bold">{description}</p>
+    <p class="text-l sm:text-2xl azeret-bold">{t("LittleDescription")}</p>
 </div>

@@ -1,13 +1,15 @@
 {
-    "Footer": {
-        "city": "Madrid",
-        "country": "España"
-    },
-    "Header": {
-        "artistFrom": "Artista desde 1998",
-        "works": "Obras",
-        "blog": "Blog",
-        "products": "Productos",
-        "contacts": "Contacto"
-    }
+  "Footer": {
+    "city": "Madrid",
+    "country": "España"
+  },
+  "Header": {
+    "artistFrom": "Artista desde 1998",
+    "works": "Obras",
+    "blog": "Blog",
+    "products": "Productos",
+    "contacts": "Contacto"
+  },
+  "LittleDescription": "JavatoGarabato, nacido en Madrid, siempre ha estado interesado por mostrar mediante sus obras una visi\u00F3n del mundo diferente e inconformista.",
+  "PublicationBanner": "PUBLICACIONES"
 }
