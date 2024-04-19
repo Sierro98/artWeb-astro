@@ -2,10 +2,18 @@
 import { Image } from "astro:assets";
 import { getXataClient } from "../xata";
 
+interface Props {
+  capsuleName: string
+}
+
+const {capsuleName} = Astro.props;
+
 const xata = getXataClient();
 
 //TODO: change this DB fetch so a prop with what to search can be passed
-const data = await xata.db.works.getPaginated({ pagination: { size: 20 } });
+
+
+const data = await xata.db.works.filter({'collection.name': capsuleName}).getPaginated({ pagination: { size: 20 } });
 ---
 
 <div class="p-5 md:p-10">
