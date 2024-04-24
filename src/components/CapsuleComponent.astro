@@ -26,7 +26,7 @@ const data = await xata.db.capsules.getPaginated({ pagination: { size: 20 } });
             inferSize
             alt={record.name || ""}
           />
-          <h2 class="pb-8 azeret-bold text-3xl relative z-10 text-white">{record.name}</h2>
+          <h2 class="pb-8 azeret-bold text-3xl relative z-10 text-gray-100">{record.name}</h2>
         </div>
       );
     })
