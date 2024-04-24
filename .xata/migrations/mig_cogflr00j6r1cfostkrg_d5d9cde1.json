@@ -1,0 +1,18 @@
+{
+  "id": "mig_cogflr00j6r1cfostkrg",
+  "parentID": "mig_cog4fe7o1o7cr1bkdacg",
+  "checksum": "1:d5d9cde195ea784e90450229cb4b4468db59fc5777ce2124cbb2d2bb40d72300",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "en_description",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Unknown"
+        },
+        "table": "works"
+      }
+    }
+  ]
+}

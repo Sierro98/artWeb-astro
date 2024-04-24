@@ -1,0 +1,19 @@
+{
+  "id": "mig_cog0jkm6fopstmtchob0",
+  "parentID": "mig_cog0j2vo1o7cr1bkd9a0",
+  "checksum": "1:851fa898a3894e2fc10ea33bb4e6039430a07ae955d602fe2aae0d516d72c493",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "author",
+          "type": "link",
+          "link": {
+            "table": "authors"
+          }
+        },
+        "table": "capsules"
+      }
+    }
+  ]
+}

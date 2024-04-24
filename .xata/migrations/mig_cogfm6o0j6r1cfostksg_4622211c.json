@@ -1,0 +1,14 @@
+{
+  "id": "mig_cogfm6o0j6r1cfostksg",
+  "parentID": "mig_cogflr00j6r1cfostkrg",
+  "checksum": "1:4622211cd3a64e6d846ab0d9189ba4d2f2b56f287b58c4f100bd5b88654ea5d6",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "es_description",
+        "oldName": "description",
+        "table": "works"
+      }
+    }
+  ]
+}

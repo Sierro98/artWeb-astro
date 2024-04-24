@@ -1,0 +1,17 @@
+{
+  "id": "mig_cog0j2vo1o7cr1bkd9a0",
+  "parentID": "mig_cog0hue6fopstmtchoa0",
+  "checksum": "1:35550fe024d8c1163df7181de986a2f6ef0df1047209d5b60a4f48e5d4d3f71f",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "unique": true
+        },
+        "table": "capsules"
+      }
+    }
+  ]
+}

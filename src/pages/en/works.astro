@@ -1,6 +1,16 @@
 ---
 import { changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import Main from "../../components/Main.astro";
+import LineBreak from "../../components/Line-Break.astro";
+import Capsule from "../capsule.astro";
 
 changeLanguage("en");
 ---
 
+<Layout title="JavatoGarabato">
+    <Main>
+      <Capsule />
+      <LineBreak />
+    </Main>
+  </Layout>

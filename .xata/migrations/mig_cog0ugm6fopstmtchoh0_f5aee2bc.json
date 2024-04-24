@@ -1,0 +1,19 @@
+{
+  "id": "mig_cog0ugm6fopstmtchoh0",
+  "parentID": "mig_cog0u5e6fopstmtchog0",
+  "checksum": "1:f5aee2bc5b551aaf97370f68a1266aed41cf2537c430946e753ab94b2286a450",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "collection",
+          "type": "link",
+          "link": {
+            "table": "capsules"
+          }
+        },
+        "table": "works"
+      }
+    }
+  ]
+}

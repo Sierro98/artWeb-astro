@@ -1,0 +1,16 @@
+{
+  "id": "mig_cog4bqm6fopstmtchp5g",
+  "parentID": "mig_cog0uufo1o7cr1bkd9c0",
+  "checksum": "1:ab81682cd3623946fa9879ba033c80ee35df2280690fbac689122786b31b3641",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "head_image",
+          "type": "file"
+        },
+        "table": "capsules"
+      }
+    }
+  ]
+}

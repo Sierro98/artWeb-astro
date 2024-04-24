@@ -1,0 +1,18 @@
+{
+  "id": "mig_cog0u5e6fopstmtchog0",
+  "parentID": "mig_cog0jkm6fopstmtchob0",
+  "checksum": "1:189747ac17e048edfe57d63ea16cfa6c0ff2979014531fa004a7a1794b2a0176",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "end_date",
+          "type": "datetime",
+          "notNull": true,
+          "defaultValue": "now"
+        },
+        "table": "capsules"
+      }
+    }
+  ]
+}

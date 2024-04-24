@@ -1,0 +1,16 @@
+{
+  "id": "mig_cog4fe7o1o7cr1bkdacg",
+  "parentID": "mig_cog4fam6fopstmtchp9g",
+  "checksum": "1:ee58676b790344923dec287aa3b15a44ec826f8129067423c1a0fadb418ac24f",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "images",
+          "type": "file"
+        },
+        "table": "works"
+      }
+    }
+  ]
+}

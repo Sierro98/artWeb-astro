@@ -13,13 +13,19 @@ const tables = [
       { name: "price", type: "float", notNull: true, defaultValue: "0.0" },
       { name: "name", type: "string", notNull: true, defaultValue: "Anon" },
       {
-        name: "description",
+        name: "es_description",
         type: "string",
         notNull: true,
         defaultValue: "Anon",
       },
       { name: "collection", type: "link", link: { table: "capsules" } },
       { name: "images", type: "file" },
+      {
+        name: "en_description",
+        type: "string",
+        notNull: true,
+        defaultValue: "Unknown",
+      },
     ],
   },
   {
