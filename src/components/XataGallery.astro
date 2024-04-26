@@ -11,6 +11,7 @@ const xata = getXataClient();
 const data = await xata.db.works
   .filter({ "collection.name": capsuleName })
   .getPaginated({ pagination: { size: 20 } });
+  console.log(capsuleName)
 ---
 
 <div class="p-5 md:p-10">
