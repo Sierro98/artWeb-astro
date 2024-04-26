@@ -1,12 +1,13 @@
 ---
+import { changeLanguage } from "i18next";
 import LineBreak from "../../components/Line-Break.astro";
 import Main from "../../components/Main.astro";
 import XataGallery from "../../components/XataGallery.astro";
 import Layout from "../../layouts/Layout.astro";
 
-const { capsules } = Astro.params;
+changeLanguage("es");
 
-console.log("CAPSULES PAGE -> " + capsules)
+const { capsules } = Astro.params;
 ---
 
 <Layout>

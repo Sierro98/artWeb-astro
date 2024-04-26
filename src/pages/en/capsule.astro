@@ -3,15 +3,14 @@ import { changeLanguage } from "i18next";
 import Layout from "../../layouts/Layout.astro";
 import Main from "../../components/Main.astro";
 import LineBreak from "../../components/Line-Break.astro";
-import MansonGallery from "../../components/XataGallery.astro";
+import XataGallery from "../../components/XataGallery.astro";
 
 changeLanguage("en");
 ---
 
-<Layout title="JavatoGarabato">
+<Layout>
   <Main>
-    <MansonGallery capsuleName="Welcome" />
+    <XataGallery capsuleName="Welcome" />
     <LineBreak />
   </Main>
 </Layout>
-

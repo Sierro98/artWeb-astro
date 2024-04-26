@@ -1,0 +1,18 @@
+---
+import { changeLanguage } from "i18next";
+import LineBreak from "../../../components/Line-Break.astro";
+import Main from "../../../components/Main.astro";
+import XataGallery from "../../../components/XataGallery.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+changeLanguage("en");
+
+const { capsules } = Astro.params;
+---
+
+<Layout>
+  <Main>
+    <XataGallery capsuleName={`${capsules}`} />
+    <LineBreak />
+  </Main>
+</Layout>
