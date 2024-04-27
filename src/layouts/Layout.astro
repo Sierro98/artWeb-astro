@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import { localizePath } from "../../node_modules/astro-i18next";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "@fontsource-variable/azeret-mono";
@@ -33,10 +34,10 @@ const { image = "/images/logo.jpg" } = Astro.props;
   </head>
   <body class="min-h-screen">
     <Header
-      obrasDest="/works"
-      blogDest="/project-mz"
-      productosDest="/project-mz"
-      contactoDest="/project-mz"
+      obrasDest={localizePath("/works")}
+      blogDest={localizePath("/project-mz")}
+      productosDest={localizePath("/project-mz")}
+      contactoDest={localizePath("/project-mz")}
     />
     <slot />
     <Footer />

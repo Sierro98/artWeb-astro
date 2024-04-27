@@ -1,5 +1,6 @@
 ---
 import { t } from "i18next"
+import { localizePath } from "../../node_modules/astro-i18next";
 
 type Props = {
     destination:string;
@@ -10,7 +11,7 @@ const message = t("PublicationBanner");
 ---
 
 <div class="pb-12">
-    <a href={destination} class="scroll-text">
+    <a href={localizePath(destination)} class="scroll-text">
         <div class="scroll-text-slide">
             <h2 class="sm:text-5xl text-4xl text-white azeret-bold">{message}</h2>
             <h2 class="sm:text-5xl text-4xl text-white azeret-bold">{message}</h2>

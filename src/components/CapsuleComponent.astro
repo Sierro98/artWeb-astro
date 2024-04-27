@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import { getXataClient } from "../xata";
+import { localizePath } from "../../node_modules/astro-i18next";
 
 const xata = getXataClient();
 
 const data = await xata.db.capsules.getPaginated({ pagination: { size: 20 } });
-
 ---
 
 <div
@@ -15,7 +15,7 @@ const data = await xata.db.capsules.getPaginated({ pagination: { size: 20 } });
     data.records.map((record) => {
       return (
         <a
-          href={`/capsules/${record.name}`}
+          href={localizePath(`/capsules/${record.name}`)}
           class="flex flex-col items-center w-fit md:w-3/6 lg:w-1/4 h-auto rounded-lg shadow-2xl p-6 bg-gray-300 md:hover:scale-110 transition duration-300 ease-out backdrop-filter backdrop-blur-lg"
           data-tilt
           data-tilt-glare

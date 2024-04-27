@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { localizePath } from "../../node_modules/astro-i18next";
 
 type Props = {
     destination:string;
@@ -16,7 +17,7 @@ import thirdImg from "../assets/OrderNow/Clothing Model Dani Navarro.jpg";
 import fourthImg from "../assets/OrderNow/Clothing Model Ksenia Varapaeva.jpg";
 ---
 <div class="pb-12">
-    <a href={destination} class="scroll-order">
+    <a href={localizePath(destination)} class="scroll-order">
         <div class="scroll-order-slide">
             <Image format='avif' quality={'max'} src={firstImg} alt={imgDescription} height={imgHeight} width={imgWidth}/>
             <Image format='avif' quality={'max'} src={secondImg} alt={imgDescription} height={imgHeight} width={imgWidth}/>

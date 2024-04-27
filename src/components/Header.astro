@@ -1,7 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import { ViewTransitions } from "astro:transitions";
-import { t } from "i18next"
+import { t } from "i18next";
+import { localizePath } from "../../node_modules/astro-i18next";
 
 type Props = {
   obrasDest: string;
@@ -18,12 +19,12 @@ const { obrasDest, blogDest, productosDest, contactoDest } = Astro.props;
   <div class="flex justify-between items-center">
     <div class="flex items-end">
       <h1 class="text-3xl sm:text-5xl azeret-bold">
-        <a href="/project-mz" class="text-black">JavatoGarabato</a>
+        <a href={localizePath("/project-mz")} class="text-black">JavatoGarabato</a>
       </h1>
       <h2 class="px-3 text-xs azeret">{t("Header.artistFrom")}</h2>
     </div>
 
-    <a href="/project-mz" class="flex gap-x-4 items-center max-sm:hidden">
+    <a href={localizePath("/project-mz")} class="flex gap-x-4 items-center max-sm:hidden">
       <Image
         loading={"eager"}
         src="/heartbeat.png"
@@ -41,10 +42,10 @@ const { obrasDest, blogDest, productosDest, contactoDest } = Astro.props;
   <div
     class="flex justify-between items-center py-3 text-base sm:text-2xl font-semibold px-2 azeret"
   >
-    <a href={obrasDest}>{t("Header.works")}</a>
-    <a href={blogDest}>{t("Header.blog")}</a>
-    <a href={productosDest}>{t("Header.products")}</a>
-    <a href={contactoDest}>{t("Header.contacts")}</a>
+    <a href={localizePath(obrasDest)}>{t("Header.works")}</a>
+    <a href={localizePath(blogDest)}>{t("Header.blog")}</a>
+    <a href={localizePath(productosDest)}>{t("Header.products")}</a>
+    <a href={localizePath(contactoDest)}>{t("Header.contacts")}</a>
   </div>
 
   <hr class="flex-grow border-gray-800" />
