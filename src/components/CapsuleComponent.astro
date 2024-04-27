@@ -18,6 +18,10 @@ const data = await xata.db.capsules.getPaginated({ pagination: { size: 20 } });
         <a
           href={`/capsules/${record.name}`}
           class="flex flex-col items-center w-fit md:w-3/6 lg:w-1/4 h-auto rounded-lg shadow-2xl p-6 bg-gray-300 md:hover:scale-110 transition duration-300 ease-out backdrop-filter backdrop-blur-lg"
+          data-tilt
+          data-tilt-glare
+          data-tilt-max-glare="0.3"
+          data-tilt-scale="1.1"
         >
           <div
             class="absolute -z-10 -inset-1 bg-cover bg-center blur filter group-hover:scale-110 transition duration-300 ease-out"
@@ -31,7 +35,7 @@ const data = await xata.db.capsules.getPaginated({ pagination: { size: 20 } });
             inferSize
             alt={record.name || ""}
           />
-          <h2 class="py-4 azeret-bold text-3xl relative z-10 text-gray-100">{record.name}</h2>
+          <h2 class="py-1 azeret-bold text-3xl relative z-10 text-gray-100">{record.name}</h2>
         </a>
       );
     })
@@ -40,10 +44,10 @@ const data = await xata.db.capsules.getPaginated({ pagination: { size: 20 } });
 
 <style>
   .custom-gradient {
-    mask-image: linear-gradient(to top, black 90%, transparent),
-      linear-gradient(to right, black 90%, transparent),
-      linear-gradient(to bottom, black 90%, transparent),
-      linear-gradient(to left, black 90%, transparent);
+    mask-image: linear-gradient(to top, black 85%, transparent),
+      linear-gradient(to right, black 85%, transparent),
+      linear-gradient(to bottom, black 85%, transparent),
+      linear-gradient(to left, black 85%, transparent);
     mask-mode: alpha;
     mask-composite: intersect; /* Use intersect to combine the gradients */
   }
