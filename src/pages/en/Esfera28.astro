@@ -1,0 +1,23 @@
+---
+import { changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import Main from "../../components/Main.astro";
+import LittleDescription from "../../components/Little-description.astro";
+import ImageCarousel from "../../components/ImageCarousel.astro";
+import OrderCarousel from "../../components/OrderCarousel.astro";
+import PublicationsBanner from "../../components/PublicationsBanner.astro";
+import LineBreak from "../../components/Line-Break.astro";
+
+changeLanguage("en");
+---
+
+<Layout>
+	<Main>
+		<LittleDescription/>
+		<ImageCarousel destination='/Esfera28'/>
+		<LineBreak/>
+		<OrderCarousel destination='/Esfera28'/>
+		<PublicationsBanner destination='/Esfera28'/>
+		<LineBreak/>
+	</Main>
+</Layout>
