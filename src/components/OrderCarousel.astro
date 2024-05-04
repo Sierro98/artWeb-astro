@@ -14,18 +14,13 @@ const capsuleImg = await xata.db.works
   .sort("name", "asc")
   .getPaginated({ pagination: { size: 4 } });
 
-type Props = {
-  destination: string;
-};
-
-const { destination } = Astro.props;
 const imgDescription: string = "Products to buy";
 const imgWidth = 500;
 const imgHeight = 450;
 ---
 
 <div class="pb-12">
-  <a href={localizePath(destination)} class="scroll-order">
+  <a href={localizePath(`/capsules/${capsule2show?.capsule?.name}`)} class="scroll-order">
     <div class="scroll-order-slide">
       <Image
         format="avif"
