@@ -58,7 +58,10 @@ const tables = [
   },
   {
     name: "home_show",
-    columns: [{ name: "capsule", type: "link", link: { table: "capsules" } }],
+    columns: [
+      { name: "capsule", type: "link", link: { table: "capsules" } },
+      { name: "Carousel", type: "string", unique: true },
+    ],
   },
 ] as const;
 
