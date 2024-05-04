@@ -51,7 +51,14 @@ const tables = [
       },
       { name: "head_image", type: "file" },
     ],
-    revLinks: [{ column: "collection", table: "works" }],
+    revLinks: [
+      { column: "collection", table: "works" },
+      { column: "capsule", table: "home_show" },
+    ],
+  },
+  {
+    name: "home_show",
+    columns: [{ name: "capsule", type: "link", link: { table: "capsules" } }],
   },
 ] as const;
 
@@ -67,10 +74,14 @@ export type AuthorsRecord = Authors & XataRecord;
 export type Capsules = InferredTypes["capsules"];
 export type CapsulesRecord = Capsules & XataRecord;
 
+export type HomeShow = InferredTypes["home_show"];
+export type HomeShowRecord = HomeShow & XataRecord;
+
 export type DatabaseSchema = {
   works: WorksRecord;
   authors: AuthorsRecord;
   capsules: CapsulesRecord;
+  home_show: HomeShowRecord;
 };
 
 const DatabaseClient = buildClient();

@@ -1,43 +1,60 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import { localizePath } from "../../node_modules/astro-i18next";
+import { getXataClient } from "../xata";
 
-type Props = {
-    destination:string;
-}
+const xata = getXataClient();
 
-const {destination} = Astro.props;
-const imgDescription: string = "JavatoGarabato Art"
+const capsule2show = await xata.db.home_show.select(["id", "capsule.name"]).getFirst();
+const capsuleImg = await xata.db.works
+  .filter("collection.name", capsule2show?.capsule?.name)
+  .sort("name", "asc")
+  .getPaginated({ pagination: { size: 5 } });
+
+const imgDescription: string = "JavatoGarabato Art";
 const imgWidth = 500;
 const imgHeight = 450;
-
-import firstImg from "../assets/MainCarousel/Andrew Kliatskyi 3D Render.jpg";
-import secondImg from "../assets/MainCarousel/Javier Miranda.jpg";
-import thirdImg from "../assets/MainCarousel/Luke Jones 3D Render.jpg";
-import fourthImg from "../assets/MainCarousel/Marco Damm 3D Render.jpg";
-import fifthImg from "../assets/MainCarousel/Rick Rothenberg 3D Renders.jpg";
 ---
+
 <div class="pb-12">
-    <a href={localizePath(destination)} class="scroll">
-        <div class="scroll-slide">
-            <Image format='avif' quality={'max'} src={firstImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image format='avif' quality={'max'} src={secondImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image format='avif' quality={'max'} src={thirdImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image format='avif' quality={'max'} src={fourthImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image format='avif' quality={'max'} src={fifthImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
-        </div>
-        <div class="scroll-slide">
-            <Image format='avif' quality={'max'} src={firstImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image format='avif' quality={'max'} src={secondImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image format='avif' quality={'max'} src={thirdImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image format='avif' quality={'max'} src={fourthImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
-            <Image format='avif' quality={'max'} src={fifthImg} alt={imgDescription} width={imgWidth} height={imgHeight}/>
-        </div>
-    </a>
+  <a href={localizePath(`/capsules/${capsule2show?.capsule?.name}`)} class="scroll">
+    <div class="scroll-slide">
+      {
+        capsuleImg.records.map((record) => {
+          return (
+            <Image
+              format="avif"
+              quality={"max"}
+              src={record.images?.url || ""}
+              alt={imgDescription}
+              width={imgWidth}
+              height={imgHeight}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="scroll-slide">
+      {
+        capsuleImg.records.map((record) => {
+          return (
+            <Image
+              format="avif"
+              quality={"max"}
+              src={record.images?.url || ""}
+              alt={imgDescription}
+              width={imgWidth}
+              height={imgHeight}
+            />
+          );
+        })
+      }
+    </div>
+  </a>
 </div>
 
 <style>
-.scroll {
+  .scroll {
     display: block;
     position: relative;
     width: 100%;
@@ -46,29 +63,29 @@ import fifthImg from "../assets/MainCarousel/Rick Rothenberg 3D Renders.jpg";
     overflow: hidden !important;
     white-space: nowrap;
     z-index: 1;
-}
-.scroll-slide {
+  }
+  .scroll-slide {
     animation: scrollImage 50s infinite linear;
     display: inline-block;
     justify-content: space-between;
     align-items: center;
     position: relative;
     white-space: nowrap;
-}
-.scroll img {
+  }
+  .scroll img {
     height: 450px;
     min-width: 500px;
-	object-fit: cover;
+    object-fit: cover;
     display: inline-block;
     margin: 0 20px;
     color: white;
-}
-@keyframes scrollImage {
+  }
+  @keyframes scrollImage {
     from {
-        transform: translateX(-100%);
+      transform: translateX(-100%);
     }
     to {
-        transform: translateX(0%);
+      transform: translateX(0%);
     }
-}
+  }
 </style>
