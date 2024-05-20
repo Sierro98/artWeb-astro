@@ -1,13 +1,15 @@
 ---
-import { changeLanguage } from "i18next";
 import Main from "../../components/Main.astro";
 import Layout from "../../layouts/Layout.astro";
+import SubTitle from "../../components/SubTitle.astro";
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("es");
 ---
 
 <Layout>
   <Main>
+    <SubTitle>{t("Header.products")}</SubTitle>
     <div class="w-full text-center">
       <h1>CATALOGO</h1>
     </div>

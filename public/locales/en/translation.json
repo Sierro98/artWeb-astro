@@ -1,15 +1,16 @@
 {
-    "Footer": {
-        "city": "Madrid",
-        "country": "Spain"
-    },
-    "Header": {
-        "artistFrom": "Artist from 1998",
-        "works": "Capsules",
-        "blog": "Blog",
-        "products": "Products",
-        "contacts": "Contact"
-    },
-    "LittleDescription": "JavatoGarabato, born in Madrid, has always been curious about showing his nonconformist vision of the world around him through his works.",
-    "PublicationBanner": "PUBLICATIONS"
+  "Footer": {
+    "city": "Madrid",
+    "country": "Spain"
+  },
+  "Header": {
+    "artistFrom": "Artist from 1998",
+    "works": "Capsules",
+    "work": "Capsule",
+    "blog": "Blog",
+    "products": "Products",
+    "contacts": "Contact"
+  },
+  "LittleDescription": "JavatoGarabato, born in Madrid, has always been curious about showing his nonconformist vision of the world around him through his works.",
+  "PublicationBanner": "PUBLICATIONS"
 }

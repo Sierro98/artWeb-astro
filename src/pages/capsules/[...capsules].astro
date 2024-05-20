@@ -1,9 +1,10 @@
 ---
-import { changeLanguage } from "i18next";
 import LineBreak from "../../components/Line-Break.astro";
 import Main from "../../components/Main.astro";
 import XataGallery from "../../components/XataGallery.astro";
 import Layout from "../../layouts/Layout.astro";
+import SubTitle from "../../components/SubTitle.astro";
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("es");
 
@@ -12,6 +13,7 @@ const { capsules } = Astro.params;
 
 <Layout>
   <Main>
+    <SubTitle>{t("Header.works")}/{capsules}</SubTitle>
     <XataGallery capsuleName={`${capsules}`} />
     <LineBreak />
   </Main>

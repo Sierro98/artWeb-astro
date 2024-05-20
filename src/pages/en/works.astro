@@ -3,6 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import Main from "../../components/Main.astro";
 import LineBreak from "../../components/Line-Break.astro";
 import Capsule from "../../components/CapsuleComponent.astro";
+import SubTitle from "../../components/SubTitle.astro";
+import { t, changeLanguage } from "i18next";
 import { changeLanguage } from "i18next";
 
 changeLanguage("en");
@@ -10,6 +12,7 @@ changeLanguage("en");
 
 <Layout>
   <Main>
+    <SubTitle >{t("Header.works")}</SubTitle>
     <Capsule />
     <LineBreak />
   </Main>
