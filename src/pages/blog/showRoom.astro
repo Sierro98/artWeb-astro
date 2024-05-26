@@ -2,6 +2,7 @@
 import Main from "../../components/Main.astro";
 import Layout from "../../layouts/Layout.astro";
 import SubTitle from "../../components/SubTitle.astro";
+import BlogPostCard from "../../components/BlogPostCard.astro";
 import { t, changeLanguage } from "i18next";
 
 changeLanguage("es");
@@ -11,7 +12,7 @@ changeLanguage("es");
   <Main>
     <SubTitle>{t("Header.blog")}</SubTitle>
     <div class="w-full text-center">
-      <h1>BLOGS</h1>
+      <BlogPostCard header="" subHeader="" image="" author="" />
     </div>
   </Main>
 </Layout>
